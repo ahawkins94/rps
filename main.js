@@ -1,10 +1,12 @@
 var gameMode = prompt("Choose your game mode:\nm8 = 2 player Rock Paper Scizzors\nCPU = Test your wits against the mighty computer")
 
-if (gameMode = 'm8') {
-	playGame()
-}
+if (gameMode === 'm8') {
+	rps2P();
+} else if (gameMode === 'CPU') {
+	rpsCpu()
+;}
 
-function playGame()
+function rps2P()
 {
     var user1 = prompt('r = Rock \np = Paper\ns = Scizzors');
 
@@ -27,10 +29,10 @@ function playGame()
 
 	    if (user2 === 's') {
 
-	    	 alert ('Rock wins!');
+	    	 alert ('User number 1 wins with Rock!');
 	        }
 	        else if (user2 === 'p') {
-	            alert('Paper wins!');
+	            alert('User number 2 wins with Paper!');
 	        }
 	}
 
@@ -38,10 +40,10 @@ function playGame()
 
 	    if (user2 === 'r') {
 
-	    	 alert ('Paper wins!');
+	    	 alert ('User number 1 wins with Paper!');
 	        }
 	        else if (user2 === 's') {
-	            alert('Scizzors win!');
+	            alert('User number 2 wins with Scizzors!');
 	        }
 	}
 
@@ -49,64 +51,74 @@ function playGame()
 
 	    if (user2 === 'p') {
 
-	    	 alert ('Scizzors win!');
+	    	 alert ('User number 1 wins with Scizzors!');
 	        }
 	        else if (user2 === 'r') {
-	            alert('Rock wins!');
+	            alert('User number 2 wins with Rock!');
 	        }
 	}
 
 }
 
+function rpsCpu() {
+
     
-// var weapon = prompt('Choose your weapon!!!!!!!!\n r for rock\n p for paper\ns for scizzors ')
+	var weapon = prompt('Choose your weapon!!!!!!!!\n r for Rock\n p for Paper\ns for Scizzors ')
 
-// var cpuWeapon = Math.random();
+	var cpuWeapon = Math.random();
 
-// if (cpuWeapon < 0.34) {
-// 	cpuWeapon = 'r';
-// } else if (cpuWeapon <= 0.67) {
-// 	cpuWeapon = 'p';
-// } else {
-// 	cpuWeapon = 's';
-// }
+	if (cpuWeapon < 0.34) {
 
-// console.log(cpuWeapon)
+		cpuWeapon = 'r';
 
-// if (weapon === cpuWeapon) {
+	} else if (cpuWeapon <= 0.67) {
 
-// 	alert('It is a draw!!')
-// }
+		cpuWeapon = 'p';
 
-// if (weapon === 'r') {
+	} else {
 
-//     if (cpuWeapon === 's') {
+		cpuWeapon = 's';
+	}
 
-//     	 alert ('rock wins');
-//         }
-//         else if (cpuWeapon === 'p') {
-//             alert('paper wins');
-//         }
-// }
+	console.log(cpuWeapon)
 
-// if (weapon === 'p') {
+	if (weapon === cpuWeapon) {
 
-//     if(cpuWeapon === 'r') {
+		alert('It is a draw!!')
+	}
 
-//     	 alert('paper wins');
-//         }
-//         else if (cpuWeapon === 's') {
-//             alert('scizzors win');
-//         }
-// }
+	if (weapon === 'r') {
 
-// if (weapon === 's') {
+	    if (cpuWeapon === 's') {
 
-//     if (cpuWeapon === 'p') {
+	    	 alert ('You win! Rock beats Paper');
+	        }
+	        else if (cpuWeapon === 'p') {
 
-//     	 alert('scizzors win');
-//         }
-//         else if (cpuWeapon === 'p') {
-//             alert('rock wins');
-//         }
-// }
+	            alert('CPU chooses Paper... YOU LOSE');
+	        }
+	}
+
+	if (weapon === 'p') {
+
+	    if(cpuWeapon === 'r') {
+
+	    	 alert('You win! Paper beats Rock');
+	        }
+	        else if (cpuWeapon === 's') {
+	            alert('CPU chooses Scizzors... YOU LOSE');
+	        }
+	}
+
+	if (weapon === 's') {
+
+	    if (cpuWeapon === 'p') {
+
+	    	 alert('You win! Scizzors beats Paper!');
+	        }
+	        else if (cpuWeapon === 'p') {
+	            alert('CPU chooses Scizzors... YOU LOSE');
+	        }
+	}
+
+}
