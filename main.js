@@ -6,15 +6,15 @@ while (gameMode === 'm8') {
 		rps2P();
 	} 
 
-	function rps2P()
-	{
-	    var user1 = prompt('r = Rock \np = Paper\ns = Scizzors');
+	function rps2P() {
+
+	    var user1 = prompt('Player 1! \nr = Rock \np = Paper\ns = Scizzors');
 
 		if (user1 != 'r' && user1 != 'p' && user1 != 's') {
 		alert("That's not an option!!!");
 		}
 
-	    var user2 = prompt('r = Rock \np = Paper\ns = Scizzors');
+	    var user2 = prompt('Player 2\nr = Rock \np = Paper\ns = Scizzors');
 
 	    if (user2 != 'r' && user2 != 'p' && user2 != 's') {
 	    	alert("That's not an option!!!");
@@ -29,10 +29,9 @@ while (gameMode === 'm8') {
 
 		    if (user2 === 's') {
 
-		    	 alert ('User number 1 wins with Rock!');
-		        }
-		        else if (user2 === 'p') {
-		            alert('User number 2 wins with Paper!');
+		    	 alert ('Player 1 wins with Rock!');
+		        } else if (user2 === 'p') {
+		            alert('Player 2 wins with Paper!');
 		        }
 		}
 
@@ -40,10 +39,9 @@ while (gameMode === 'm8') {
 
 		    if (user2 === 'r') {
 
-		    	 alert ('User number 1 wins with Paper!');
-		        }
-		        else if (user2 === 's') {
-		            alert('User number 2 wins with Scizzors!');
+		    	 alert ('Player 1 wins with Paper!');
+		        } else if (user2 === 's') {
+		            alert('Player 2 wins with Scizzors!');
 		        }
 		}
 
@@ -51,10 +49,9 @@ while (gameMode === 'm8') {
 
 		    if (user2 === 'p') {
 
-		    	 alert ('User number 1 wins with Scizzors!');
-		        }
-		        else if (user2 === 'r') {
-		            alert('User number 2 wins with Rock!');
+		    	 alert ('Player 1 wins with Scizzors!');
+		        } else if (user2 === 'r') {
+		            alert('Player 2 wins with Rock!');
 		        }
 		}
 
